@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="線を誘導する">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="projectyudofu">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+  <title>YuDoFu</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body style="background-color: #03A9F4; position: relative; height: 100vh;">
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js?v=3719561927');
+      });
+    }
+  </script>
+  <div style="position: absolute; top: 50%; left: 50%; width: 300px; height: 300px; transform: translate(-50%,-50%);">
+    <picture >
+      <source type="image/webp" srcset="fastlogo.png.webp" style="width: 100%; height: 100%;"/>
+      <img src="fastlogo.png" style="width: 100%; height: 100%;"/>
+    </picture>
+  </div>
+  <script src="main.dart.js?v=3719561927" type="application/javascript"></script>
+</body>
+</html>
